@@ -46,13 +46,13 @@
 		
 		<span onclick="toggleSidebar()" class="crossbtn">&times</span>
 		
-		<a href="#" class="Home"><i class="fa-solid fa-house"></i> Home</a>
+		<a href="#" th:href="@{/userControll/index}" class="Home"><i class="fa-solid fa-house"></i> Home</a>
 		<a href="#" class="View"><i class="fa-regular fa-eye"></i> View</a>
 		<a href="#" class="Contacts"> <i class="fa-regular fa-address-book"></i> Contacts</a>
-		<a href="#" class="Add Contacts"><i class="fa-solid fa-plus"></i> Add Contacts</a>
+		<a href="#" th:href="@{/userControll/addContact}"  class="Add Contacts"><i class="fa-solid fa-plus"></i> Add Contacts</a>
 		<a href="#" class="Your Profile"><i class="fa-regular fa-user"></i> Your Profile</a>
 		<a href="#" class="Setting"><i class="fa-solid fa-gear"></i> Setting</a>
-		<a href="#" class="Logout"><i class="fa-solid fa-arrow-right-from-bracket"></i> Logout</a>
+		<a href="#" th:href="@{/logout}" class="Logout"><i class="fa-solid fa-arrow-right-from-bracket"></i> Logout</a>
 		<div class="divider"></div>
 	</div>
 	<!-- end sidebar -->
