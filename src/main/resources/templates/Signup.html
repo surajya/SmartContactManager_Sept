@@ -19,10 +19,10 @@
 						 
 						<!--<th:block th:text="${session.removeAttribute('message')}"></th:block> -->
 						
-						<div class="container text-center">
+						<!--<div class="container text-center">
 							<img alt="Registration image" style="width: 80px"
 								th:src="@{/img/form.png}">
-						</div>
+						</div>-->
 
 						<h1 class="text-center">Register Here !!</h1>
 						<form th:action="@{/do_register}" th:method="post"
@@ -74,8 +74,13 @@
 
 
 							<div class="container text-center">
-								<button type="submit" class="btn bg-primary1 text-white">Submit</button>
-								<button type="reset" class="btn btn-warning text-white">Reset</button>
+								<button type="submit" class="btn bg-primary1 text-white"><strong>Submit</strong></button>
+								<button type="reset" class="btn btn-warning text-white"><strong>Reset</strong></button>
+							</div>
+							<br>
+							<div id="login-link" class="container text-center">
+								<span>Already have an account? </span>
+								<a href="/signin" class="text-info"><strong>Login here</strong></a>
 							</div>
 						</form>
 					</div>

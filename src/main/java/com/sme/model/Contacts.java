@@ -1,23 +1,17 @@
 package com.sme.model;
 
-import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
-import jakarta.persistence.ManyToOne;
-import jakarta.persistence.Table;
+import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 import lombok.ToString;
+import org.springframework.web.multipart.MultipartFile;
 
 @Getter
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
-@ToString
 
 @Entity
 @Table(name="CONTACTS")
@@ -32,13 +26,19 @@ public class Contacts {
 	
 	@Column(unique = true)
 	private String cemail;
-	private String cimage;
+
+	@Transient
+	private MultipartFile cimage;
+
+	@Column(length = 1000)
 	private String cdiscription;
 	@Column(length = 10)
 	private String cphoneNumber;
 	
 	@ManyToOne
 	private User user;
+
+
 	
 
 }

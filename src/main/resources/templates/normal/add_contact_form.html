@@ -27,7 +27,7 @@
             <div class="container-fluid mt-1">
                 <div class="row">
                     <div class="col-md-8 offset-md-2">
-                        <form  method="post" enctype="multipart/form-data"
+                        <form th:action="@{/userControll/process-contact}" method="post" enctype="multipart/form-data"
                               th:object="${addContact}" class="mt-2">
                             <div class="mb-3">
                                 <label for="name" class="form-label">Full Name</label>

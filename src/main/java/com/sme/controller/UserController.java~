@@ -3,7 +3,6 @@ package com.sme.controller;
 import java.security.Principal;
 
 import com.sme.model.Contacts;
-import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -15,7 +14,6 @@ import com.sme.model.User;
 import com.sme.repository.UserRepositoryImpl;
 import org.springframework.web.multipart.MultipartFile;
 
-@Slf4j
 @Controller
 
 @RequestMapping("/userControll")
@@ -60,8 +58,7 @@ public class UserController {
 		contacts.setUser(user);
 		user.getContacts().add(contacts);
 		userRepositoryImpl.save(user);
-		log.info("information about user:{}", user);
-		log.info("information about contact:{}", contacts);
+		System.out.println(contacts);
 		return "/normal/add_contact_form";
 	}
 
